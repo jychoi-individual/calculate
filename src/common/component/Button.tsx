@@ -1,8 +1,11 @@
 // 라이브러리
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 // 인터페이스
 import { ButtonProps } from "../type/commonType";
+
+// 스타일
+import ButtonStyle from "../style/ButtonStyle";
 
 /**
  * @desc 공통 단일 버튼 컴포넌트입니다.
@@ -21,32 +24,8 @@ function Button({ text, icon, className }: ButtonProps): JSX.Element {
 
 export default Button;
 
-const operateStyle = css`
-  width: 120px;
-  height: 90px;
-  background: ${(props) => props.theme.color.primary};
-  box-shadow: 1px 1px 1px 1px ${(props) => props.theme.color.btnBackground};
-
-  svg {
-    font-size: 25px;
-    color: ${(props) => props.theme.color.dark};
-  }
-
-  &:last-child {
-    background: ${(props) => props.theme.color.deepPrimary};
-
-    svg {
-      color: ${(props) => props.theme.color.smoke};
-    }
-  }
-`;
-
 const ButtonDiv = styled.button`
-  border-radius: 50px;
-  cursor: pointer;
-
-  &.operate__btn {
-    ${operateStyle}
-  }
+  ${ButtonStyle}
 `;
+
 const IconDiv = styled.div``;

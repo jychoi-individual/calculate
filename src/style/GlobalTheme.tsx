@@ -2,12 +2,13 @@
 const GlobalTheme = {
   color: {
     primary: "#f1d0ca",
-    deepPrimary: "#eca192",
+    vividPrimary: "#eca192",
     dark: "#333333",
-    btnBackground: "#272626",
     deepDark: "#313030",
+    shadow: "#272626",
     white: "#ffffff",
     smoke: "#eeeeee",
+    deepSmoke: "#cac9c9",
     smokeOpacity: "#eeeeee40",
   },
 };

@@ -12,6 +12,6 @@ function CalculateMath(): JSX.Element {
 export default CalculateMath;
 
 const CalculateMathDiv = styled.div`
-  width: 50%;
+  width: 60%;
   height: 100%;
 `;

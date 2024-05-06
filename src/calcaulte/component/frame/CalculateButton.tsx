@@ -26,5 +26,5 @@ const CalculateButtonDiv = styled.div`
   width: 100%;
   height: 50%;
   display: flex;
-  gap: 10px;
+  gap: 20px;
 `;
