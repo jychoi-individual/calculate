@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 // 컴포넌트
-import Button from "../../../common/component/Button";
+import Button from "../../../../common/component/Button";
 
 // 아이콘
 import {
@@ -74,8 +74,8 @@ const CalculateNumberDiv = styled.div`
   width: 30%;
   height: 100%;
   display: flex;
-  gap: 10px;
   flex-direction: column;
+  justify-content: space-between;
 `;
 
 const NumberButtonWrap = styled.div`

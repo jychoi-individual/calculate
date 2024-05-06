@@ -2,9 +2,9 @@
 import styled from "styled-components";
 
 // 컴포넌트
-import CalculateMath from "../unit/CalculateMath";
-import CalculateOperator from "../unit/CalculateOperator";
-import CalculateNumber from "../unit/CalculateNumber";
+import CalculateMath from "../unit/button/CalculateMath";
+import CalculateOperator from "../unit/button/CalculateOperator";
+import CalculateNumber from "../unit/button/CalculateNumber";
 
 /**
  * @desc 계산기의 버튼 영역 컴포넌트입니다.
@@ -24,7 +24,7 @@ export default CalculateButton;
 
 const CalculateButtonDiv = styled.div`
   width: 100%;
-  height: 50%;
+  height: 500px;
   display: flex;
   gap: 20px;
 `;

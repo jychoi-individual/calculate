@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 // 컴포넌트
-import Button from "../../../common/component/Button";
+import Button from "../../../../common/component/Button";
 
 // 아이콘
 import { FaPlus, FaMinus, FaDivide, FaTimes, FaEquals } from "react-icons/fa";

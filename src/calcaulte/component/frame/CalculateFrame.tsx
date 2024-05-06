@@ -25,11 +25,11 @@ function CalcaulteFrame(): JSX.Element {
 export default CalcaulteFrame;
 
 const CalcaulteFrameDiv = styled.div`
-  width: calc(100% - 30px);
-  height: calc(100% - 30px);
-  padding: 15px;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  padding: 20px;
   background: ${(props) => props.theme.color.dark};
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 35px;
 `;

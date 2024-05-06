@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100vh;
     overflow-y:hidden;
+    overflow-x:hidden;
     font-family: GlobalFont;
     letter-spacing: 0.01rem;
     -webkit-font-smoothing: antialiased;
