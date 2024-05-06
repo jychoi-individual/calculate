@@ -6,9 +6,6 @@ import reportWebVitals from "./reportWebVitals";
 // 컴포넌트
 import App from "./App";
 
-// 스타일
-import "./index.css";
-
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );

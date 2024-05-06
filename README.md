@@ -109,3 +109,7 @@
 ### react-router-dom
 
 - router 기반으로 컴포넌트를 로드하기 위한 모듈입니다.
+
+### react-icons
+
+- react에서 제공하는 아이콘을 사용하기 위한 모듈입니다.
