@@ -3,6 +3,7 @@ import { css } from "styled-components";
 
 const heartStyle = css`
   background: ${(props) => props.theme.color.deepSmoke};
+  width: 33%;
 
   svg {
     font-size: 40px;
@@ -16,6 +17,7 @@ const heartStyle = css`
 
 const dotStyle = css`
   background: ${(props) => props.theme.color.deepSmoke};
+  width: 33%;
 
   svg {
     font-size: 10px;
@@ -29,6 +31,7 @@ const dotStyle = css`
 
 const addNumberStyle = css`
   background: ${(props) => props.theme.color.deepSmoke};
+  width: 33%;
 
   svg {
     font-size: 28px;
@@ -43,6 +46,8 @@ const addNumberStyle = css`
 
 const numberStyle = css`
   background: ${(props) => props.theme.color.smoke};
+  width: 33%;
+
   svg {
     font-size: 28px;
     stroke-width: 10px;
@@ -56,6 +61,7 @@ const numberStyle = css`
 
 const operateStyle = css`
   background: ${(props) => props.theme.color.primary};
+  width: 100%;
 
   &:active {
     box-shadow: none;
@@ -79,7 +85,6 @@ const operateStyle = css`
 const ButtonStyle = css`
   border-radius: 50px;
   cursor: pointer;
-  width: 120px;
   height: 90px;
   box-shadow: 1px 1px 1px 1px ${(props) => props.theme.color.shadow};
   transition-duration: 0.3s;
