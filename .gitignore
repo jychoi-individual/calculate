@@ -1,0 +1,10 @@
+# 모듈 폴더입니다.
+# git에서 프로젝트 연결 후 npm install을 이용해 사용합니다.
+/node_modules
+
+# 단위 테스트 결과 폴더입니다.
+/coverage
+
+# 빌드 결과물에 대한 폴더입니다.
+# git에서 프로젝트 연결 후 npm run build를 이용해 사용합니다.
+/build
