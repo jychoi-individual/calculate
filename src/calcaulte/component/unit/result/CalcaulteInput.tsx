@@ -36,7 +36,7 @@ export default CalcaulteInput;
 
 const CalculateInputDiv = styled.div`
   display: flex;
-  padding: 15px 25px;
+  padding: 10px 25px;
   margin: 20px;
   border-bottom: 3px solid ${(props) => props.theme.color.midDark};
 

@@ -22,7 +22,7 @@ function Logo(): JSX.Element {
       </LogoIcon>
 
       {/** 로고의 문구 영역입니다. */}
-      <LogoText className="logo__text highlight">{"MASS CLASS"}</LogoText>
+      <LogoText className="logo__text">{"MASS CLASS"}</LogoText>
     </LogoDiv>
   );
 }

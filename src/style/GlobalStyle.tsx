@@ -5,9 +5,14 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "GlobalFont";
-    src: url("../asset/font/Freesentation.ttf") format ('font-woff2');
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
   }
   
+  @font-face {
+    font-family: "LogoFont";
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Giants-Inline.woff2') format('woff2');
+  }
+
   body,
   html,
   #root {
@@ -22,7 +27,12 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
-  .highlight{
+  input {
+    font-family: GlobalFont;
+  }
+
+  .logo__text {
+    font-family:  LogoFont;
     display: inline;
     box-shadow: inset 0 -12px 0 ${(props) => props.theme.color.smokeOpacity}; 
   }
