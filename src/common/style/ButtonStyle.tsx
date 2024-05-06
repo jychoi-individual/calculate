@@ -7,6 +7,11 @@ const heartStyle = css`
   svg {
     font-size: 40px;
   }
+
+  &:active {
+    box-shadow: none;
+    background: ${(props) => props.theme.color.click};
+  }
 `;
 
 const dotStyle = css`
@@ -14,6 +19,11 @@ const dotStyle = css`
 
   svg {
     font-size: 10px;
+  }
+
+  &:active {
+    box-shadow: none;
+    background: ${(props) => props.theme.color.click};
   }
 `;
 
@@ -24,6 +34,11 @@ const addNumberStyle = css`
     font-size: 28px;
     stroke-width: 10px;
   }
+
+  &:active {
+    box-shadow: none;
+    background: ${(props) => props.theme.color.click};
+  }
 `;
 
 const numberStyle = css`
@@ -32,16 +47,31 @@ const numberStyle = css`
     font-size: 28px;
     stroke-width: 10px;
   }
+
+  &:active {
+    box-shadow: none;
+    background: ${(props) => props.theme.color.click};
+  }
 `;
 
 const operateStyle = css`
   background: ${(props) => props.theme.color.primary};
+
+  &:active {
+    box-shadow: none;
+    background: ${(props) => props.theme.color.deepPrimary};
+  }
 
   &:last-child {
     background: ${(props) => props.theme.color.vividPrimary};
 
     svg {
       color: ${(props) => props.theme.color.smoke};
+    }
+
+    &:active {
+      box-shadow: none;
+      background: ${(props) => props.theme.color.vividDeepPrimary};
     }
   }
 `;
@@ -52,6 +82,7 @@ const ButtonStyle = css`
   width: 120px;
   height: 90px;
   box-shadow: 1px 1px 1px 1px ${(props) => props.theme.color.shadow};
+  transition-duration: 0.3s;
 
   svg {
     font-size: 25px;

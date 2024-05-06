@@ -45,11 +45,11 @@ const LogoIcon = styled.div`
   align-items: center;
 
   svg {
-    font-size: 22px;
+    font-size: 26px;
   }
 `;
 
 const LogoText = styled.div`
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 600;
 `;

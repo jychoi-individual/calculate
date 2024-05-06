@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
 
   .highlight{
     display: inline;
-    box-shadow: inset 0 -7px 0 ${(props) => props.theme.color.smokeOpacity}; 
+    box-shadow: inset 0 -12px 0 ${(props) => props.theme.color.smokeOpacity}; 
   }
 `;
 
