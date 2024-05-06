@@ -15,7 +15,7 @@ export default CalculateResult;
 
 const CalculateResultDiv = styled.div`
   width: 100%;
-  height: 30%;
+  height: 40%;
   background: ${(props) => props.theme.color.deepDark};
   border-radius: 4px;
 `;

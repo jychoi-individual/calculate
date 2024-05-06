@@ -1,5 +1,5 @@
 // 라이브러리
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 // 인터페이스
 import { ButtonProps } from "../type/commonType";
@@ -7,18 +7,46 @@ import { ButtonProps } from "../type/commonType";
 /**
  * @desc 공통 단일 버튼 컴포넌트입니다.
  * @param {string} text 버튼의 출력 문구입니다.
- * @param {IconType} Icon 버튼의 출력 아이콘입니다.
+ * @param {React.ReactElement} icon 버튼의 출력 아이콘입니다.
  * @return {JSX.Element} 공통 단일 버튼 컴포넌트를 반환합니다.
  */
-function Button({ text, Icon }: ButtonProps): JSX.Element {
+function Button({ text, icon, className }: ButtonProps): JSX.Element {
   return (
-    <ButtonDiv className="button">
+    <ButtonDiv className={`button ${className}`}>
       {text !== undefined && text}
-      {Icon !== undefined && <Icon />}
+      {icon !== undefined && <IconDiv>{icon}</IconDiv>}
     </ButtonDiv>
   );
 }
 
 export default Button;
 
-const ButtonDiv = styled.button``;
+const operateStyle = css`
+  width: 120px;
+  height: 90px;
+  background: ${(props) => props.theme.color.primary};
+  box-shadow: 1px 1px 1px 1px ${(props) => props.theme.color.btnBackground};
+
+  svg {
+    font-size: 25px;
+    color: ${(props) => props.theme.color.dark};
+  }
+
+  &:last-child {
+    background: ${(props) => props.theme.color.deepPrimary};
+
+    svg {
+      color: ${(props) => props.theme.color.smoke};
+    }
+  }
+`;
+
+const ButtonDiv = styled.button`
+  border-radius: 50px;
+  cursor: pointer;
+
+  &.operate__btn {
+    ${operateStyle}
+  }
+`;
+const IconDiv = styled.div``;

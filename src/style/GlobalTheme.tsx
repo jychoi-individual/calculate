@@ -1,8 +1,10 @@
 // 공통적으로 사용하는 테마로 색상과 사이즈를 표기합니다.
 const GlobalTheme = {
   color: {
-    primary: "#f2eeea",
+    primary: "#f1d0ca",
+    deepPrimary: "#eca192",
     dark: "#333333",
+    btnBackground: "#272626",
     deepDark: "#313030",
     white: "#ffffff",
     smoke: "#eeeeee",

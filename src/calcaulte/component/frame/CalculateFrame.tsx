@@ -31,5 +31,5 @@ const CalcaulteFrameDiv = styled.div`
   background: ${(props) => props.theme.color.dark};
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 `;
