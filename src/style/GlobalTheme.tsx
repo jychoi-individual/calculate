@@ -10,6 +10,7 @@ const GlobalTheme = {
     midDark: "#434343",
     deepDark: "#2d2d2d",
     shadow: "#272626",
+    resize: "#2a2a2ad1",
     white: "#ffffff",
     smoke: "#eeeeee",
     deepSmoke: "#cac9c9",

@@ -13,7 +13,7 @@ function CalculateHistory(): JSX.Element {
 
   return (
     <CalculateHistoryDiv className="calculate__history">
-      {/** 해당 영역 타이틀입니다. */}
+      {/** 해당 영역 안내 문구 영역입니다. */}
       <CalculateHistoryItem className="empth__history">
         <FcAdvertising />
         {"입력된 수식에 대한 결과가 보여집니다. 입력해주세요!"}

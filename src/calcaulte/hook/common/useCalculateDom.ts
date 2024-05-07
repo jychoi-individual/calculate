@@ -1,5 +1,5 @@
 // 인터페이스
-import { FileType } from "../../common/type/commonType";
+import { FileType } from "../../../common/type/commonType";
 
 /**
  * @desc 계산 컴포넌트의 Dom을 제어하기 위한 함수를 모아놓았습니다.
