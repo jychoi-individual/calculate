@@ -45,7 +45,7 @@ const LogoIcon = styled.div`
   align-items: center;
 
   svg {
-    font-size: 26px;
+    font-size: 28px;
   }
 `;
 

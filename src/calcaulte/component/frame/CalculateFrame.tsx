@@ -3,8 +3,7 @@ import styled from "styled-components";
 
 // 컴포넌트
 import CalculateHeader from "./CalculateHeader";
-import CalculateResult from "./CalculateResult";
-import CalculateButton from "./CalculateButton";
+import CalculateContent from "./CalculateContent";
 import CalculateFooter from "./CalculateFooter";
 
 /**
@@ -15,8 +14,7 @@ function CalcaulteFrame(): JSX.Element {
   return (
     <CalcaulteFrameDiv className="calculate__frame">
       <CalculateHeader />
-      <CalculateResult />
-      <CalculateButton />
+      <CalculateContent />
       <CalculateFooter />
     </CalcaulteFrameDiv>
   );
@@ -26,10 +24,10 @@ export default CalcaulteFrame;
 
 const CalcaulteFrameDiv = styled.div`
   width: calc(100% - 40px);
-  height: calc(100% - 40px);
-  padding: 20px;
+  height: calc(100% - 20px);
+  padding: 10px 20px;
   background: ${(props) => props.theme.color.dark};
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 10px;
 `;

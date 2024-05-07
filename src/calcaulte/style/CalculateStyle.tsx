@@ -2,7 +2,7 @@
 import { css } from "styled-components";
 
 const CalculateResultStyle = css`
-  width: 50%;
+  width: 100%;
   background: ${(props) => props.theme.color.deepDark};
   border-radius: 4px;
 `;

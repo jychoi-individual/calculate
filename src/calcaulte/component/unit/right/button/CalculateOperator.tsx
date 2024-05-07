@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 // 컴포넌트
-import Button from "../../../../common/component/Button";
+import Button from "../../../../../common/component/Button";
 
 // 아이콘
 import { FaPlus, FaMinus, FaDivide, FaTimes, FaEquals } from "react-icons/fa";
@@ -26,7 +26,6 @@ function CalculateOperator(): JSX.Element {
 export default CalculateOperator;
 
 const CalculateOperatorDiv = styled.div`
-  width: 10%;
   height: 100%;
   display: flex;
   justify-content: space-between;

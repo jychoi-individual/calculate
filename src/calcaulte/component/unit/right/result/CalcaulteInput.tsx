@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 // 함수
-import useCalculateDom from "../../../hook/useCalculateDom";
+import useCalculateDom from "../../../../hook/useCalculateDom";
 
 // 아이콘
 import { IoSearchOutline } from "react-icons/io5";

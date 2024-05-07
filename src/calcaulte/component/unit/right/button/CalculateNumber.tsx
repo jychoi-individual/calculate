@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 // 컴포넌트
-import Button from "../../../../common/component/Button";
+import Button from "../../../../../common/component/Button";
 
 // 아이콘
 import {
@@ -71,7 +71,6 @@ function CalculateNumber(): JSX.Element {
 export default CalculateNumber;
 
 const CalculateNumberDiv = styled.div`
-  width: 30%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -79,8 +78,6 @@ const CalculateNumberDiv = styled.div`
 `;
 
 const NumberButtonWrap = styled.div`
-  width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  gap: 10px;
+  gap: 18px;
 `;
