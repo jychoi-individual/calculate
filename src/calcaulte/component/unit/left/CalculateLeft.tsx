@@ -1,8 +1,11 @@
 // 라이브러리
 import styled from "styled-components";
+import { useRef } from "react";
 
 // 컴포넌트
-import CalculateCanvas from "./draw/CalculateCanvas";
+import CalculateCanvas from "./memo/CalculateCanvas";
+import CalcaulteColorBtn from "./common/CalcaulteColorBtn";
+import CalculateSizeBtn from "./common/CalcaulteSizeBtn";
 
 // 함수
 import useResizeDom from "../../../hook/common/useResizeDom";
@@ -15,13 +18,21 @@ import { CalculateResultStyle } from "../../../style/CalculateStyle";
  * @return {JSX.Element} 계산기의 수식 수기 입력 컴포넌트를 반환합니다.
  */
 function CalculateLeft(): JSX.Element {
+  const memoCanvas = useRef<HTMLCanvasElement>(null);
+
   const { mouseDownResizer } = useResizeDom();
 
   return (
     <CalculateLeftDiv className="calculate__left">
+      {/** 캔버스의 버튼 영역입니다. */}
+      <CalculateCanvasBtnDiv className="calculate__canvas__btn">
+        <CalcaulteColorBtn memoCanvas={memoCanvas} />
+        <CalculateSizeBtn memoCanvas={memoCanvas} />
+      </CalculateCanvasBtnDiv>
+
       {/** 자유롭게 사용할 수 있는 메모 영역입니다. */}
       <CalculateMemoDiv className="calculate__memo">
-        <CalculateCanvas />
+        <CalculateCanvas memoCanvas={memoCanvas} />
       </CalculateMemoDiv>
 
       {/** 창 사이즈를 변경할 수 있는 영역입니다. */}
@@ -44,6 +55,17 @@ const CalculateLeftDiv = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
+`;
+
+const CalculateCanvasBtnDiv = styled.div`
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 `;
 
 const CalculateMemoDiv = styled.div`

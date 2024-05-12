@@ -29,7 +29,7 @@ function Button({
       $background={background}
       onClick={onClick}
     >
-      {text !== undefined && text}
+      {text !== undefined && <TextDiv className="button__text">{text}</TextDiv>}
       {icon !== undefined && <IconDiv className="button__icon">{icon}</IconDiv>}
     </ButtonDiv>
   );
@@ -41,6 +41,8 @@ const ButtonDiv = styled.button<{ $background: string }>`
   background: ${(props) => props.$background};
   ${ButtonStyle}
 `;
+
+const TextDiv = styled.div``;
 
 const IconDiv = styled.div`
   width: 100%;

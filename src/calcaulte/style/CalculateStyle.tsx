@@ -21,3 +21,14 @@ export const CalculateItemStyle = css`
     font-size: 26px;
   }
 `;
+
+export const CalculateBtnDivStyle = css`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
+
+export const CalculateBtnWrapperStyle = css`
+  display: flex;
+  gap: 10px;
+`;

@@ -1,13 +1,37 @@
 // 라이브러리
 import { css } from "styled-components";
 
-const calculateBtnStyle = css`
+const sizeBtnStyle = css`
   width: 32px;
   height: 32px;
   border-radius: 15px;
   border: 3px solid ${(props) => props.theme.color.lightSmoke};
   box-shadow: 0 8px 7px -7px ${(props) => props.theme.color.smokeOpacity};
-  padding: 0;
+
+  .button__text {
+    font-size: 13px;
+    color: ${(props) => props.theme.color.dark};
+  }
+
+  &.active {
+    border: 3px solid ${(props) => props.theme.color.deepPrimary};
+
+    .button__text {
+      font-size: 13px;
+      color: ${(props) => props.theme.color.deepPrimary};
+      font-weight: 600;
+
+      box-shadow: 0 8px 7px -7px ${(props) => props.theme.color.deepPrimary};
+    }
+  }
+`;
+
+const colorBtnStyle = css`
+  width: 32px;
+  height: 32px;
+  border-radius: 15px;
+  border: 3px solid ${(props) => props.theme.color.lightSmoke};
+  box-shadow: 0 8px 7px -7px ${(props) => props.theme.color.smokeOpacity};
 
   svg {
     color: ${(props) => props.theme.color.smoke};
@@ -15,11 +39,9 @@ const calculateBtnStyle = css`
     display: none;
   }
 
-  &:first-child {
+  &.white__chk__btn {
     svg {
       color: ${(props) => props.theme.color.deepPrimary};
-      font-size: 18px;
-      display: none;
     }
   }
 
@@ -129,8 +151,12 @@ const ButtonStyle = css`
     ${heartStyle}
   }
 
-  &.calcaulte__canvas__btn {
-    ${calculateBtnStyle}
+  &.color__canvas__btn {
+    ${colorBtnStyle}
+  }
+
+  &.size__canvas__btn {
+    ${sizeBtnStyle}
   }
 `;
 

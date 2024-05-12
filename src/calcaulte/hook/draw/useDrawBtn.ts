@@ -8,10 +8,10 @@ import { FileType } from "../../../common/type/commonType";
 function useDrawBtn(): FileType {
   /**
    * @desc 캔버스의 그리기 색상을 변경합니다.
+   * @param {React.RefObject<HTMLCanvasElement>} canvas 메모 캔버스입니다.
    * @param {string} background 변경할 색상입니다.
-   * @param {number} idx 클릭된 버튼의 index입니다.
    */
-  const changeContext = (
+  const changeContextColor = (
     canvas: React.RefObject<HTMLCanvasElement>,
     background: string
   ) => {
@@ -24,13 +24,29 @@ function useDrawBtn(): FileType {
   };
 
   /**
+   * @desc 캔버스의 그리기 사이즈를 변경합니다.
+   * @param {React.RefObject<HTMLCanvasElement>} canvas 메모 캔버스입니다.
+   * @param {string} size 변경할 사이즈입니다.
+   */
+  const changeContextSize = (
+    canvas: React.RefObject<HTMLCanvasElement>,
+    size: string
+  ) => {
+    if (canvas.current !== null) {
+      const context = canvas.current.getContext(
+        "2d"
+      ) as CanvasRenderingContext2D;
+      context.lineWidth = parseInt(size.split("px")[0]);
+    }
+  };
+
+  /**
    * @desc 버튼의 활성화 변경을 수행합니다.
    * @param {number} idx 클릭된 버튼의 index입니다.
+   * @param {string} className 변경할 Dom의 클래스 명칭입니다.
    */
-  const changeActive = (idx: number) => {
-    const buttonDom = Array.from(
-      document.getElementsByClassName("calcaulte__canvas__btn")
-    );
+  const changeActive = (idx: number, className: string) => {
+    const buttonDom = Array.from(document.getElementsByClassName(className));
 
     buttonDom !== null &&
       buttonDom.forEach((btn: Element, subIdx: number) => {
@@ -50,11 +66,26 @@ function useDrawBtn(): FileType {
     background: string,
     idx: number
   ) => {
-    changeActive(idx);
-    changeContext(canvas, background);
+    changeActive(idx, "color__canvas__btn");
+    changeContextColor(canvas, background);
   };
 
-  return { changeColorBtn };
+  /**
+   * @desc 사이즈 버튼이 클릭되었을 때 수행합니다.
+   * @param {React.RefObject<HTMLCanvasElement>} canvas 메모 캔버스입니다.
+   * @param {string} size 변경할 사이즈입니다.
+   * @param {number} idx 클릭된 버튼의 index입니다.
+   */
+  const changeSizeBtn = (
+    canvas: React.RefObject<HTMLCanvasElement>,
+    size: string,
+    idx: number
+  ) => {
+    changeActive(idx, "size__canvas__btn");
+    changeContextSize(canvas, size);
+  };
+
+  return { changeColorBtn, changeSizeBtn };
 }
 
 export default useDrawBtn;
