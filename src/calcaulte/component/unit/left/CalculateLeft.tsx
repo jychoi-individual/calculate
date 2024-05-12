@@ -8,7 +8,7 @@ import CalculateCanvas from "./draw/CalculateCanvas";
 import useResizeDom from "../../../hook/common/useResizeDom";
 
 // 스타일
-import CalculateResultStyle from "../../../style/CalculateStyle";
+import { CalculateResultStyle } from "../../../style/CalculateStyle";
 
 /**
  * @desc 계산기의 수식 수기 입력 컴포넌트입니다.
@@ -57,7 +57,7 @@ const CalculateAnswerDiv = styled.div`
 `;
 
 const CalculateResizer = styled.div`
-  height: 8px;
+  height: 10px;
   transition: height 0.2s ease-in;
   cursor: row-resize;
 

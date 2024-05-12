@@ -7,7 +7,7 @@ import CalculateOperator from "./button/CalculateOperator";
 import CalculateNumber from "./button/CalculateNumber";
 
 // 스타일
-import CalculateResultStyle from "../../../style/CalculateStyle";
+import { CalculateResultStyle } from "../../../style/CalculateStyle";
 
 /**
  * @desc 계산기의 오른쪽 영역 컴포넌트입니다.

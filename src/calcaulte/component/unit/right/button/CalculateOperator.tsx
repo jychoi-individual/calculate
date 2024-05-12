@@ -4,8 +4,8 @@ import styled from "styled-components";
 // 컴포넌트
 import Button from "../../../../../common/component/Button";
 
-// 아이콘
-import { FaPlus, FaMinus, FaDivide, FaTimes, FaEquals } from "react-icons/fa";
+// 함수
+import { operatorButton } from "../../../../const/calculateButton";
 
 /**
  * @desc 계산기에서의 기본 사칙연산 버튼 영역입니다.
@@ -14,11 +14,18 @@ import { FaPlus, FaMinus, FaDivide, FaTimes, FaEquals } from "react-icons/fa";
 function CalculateOperator(): JSX.Element {
   return (
     <CalculateOperatorDiv className="calcaulate__operator">
-      <Button icon={<FaPlus />} className={"operate__btn"} />
-      <Button icon={<FaMinus />} className={"operate__btn"} />
-      <Button icon={<FaTimes />} className={"operate__btn"} />
-      <Button icon={<FaDivide />} className={"operate__btn"} />
-      <Button icon={<FaEquals />} className={"operate__btn"} />
+      {operatorButton.map(
+        (el: { background: string; icon: React.ReactElement }, idx: number) => {
+          return (
+            <Button
+              icon={el.icon}
+              className={"operate__btn"}
+              background={el.background}
+              key={idx}
+            />
+          );
+        }
+      )}
     </CalculateOperatorDiv>
   );
 }

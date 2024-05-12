@@ -24,5 +24,5 @@ const CalculateContentDiv = styled.div`
   height: calc(100% - 100px);
   padding: 10px 20px 0px 20px;
   display: flex;
-  gap: 20px;
+  gap: 10px;
 `;

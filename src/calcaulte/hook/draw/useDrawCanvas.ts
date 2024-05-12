@@ -5,14 +5,14 @@ import { useState } from "react";
 import { FileType } from "../../../common/type/commonType";
 
 /**
- * @desc 메모 영역에서 이벤트가 발생했을 때 수행합니다.
- * @return {FileType} 메모 영역에서 초기 설정을 위한 함수를 반환합니다.
+ * @desc 메모 영역에서 마우스 이벤트가 발생했을 때 수행합니다.
+ * @return {FileType} 메모 영역에서 마우스 이벤트 관련 함수를 반환합니다.
  */
 function useDrawCanvas(): FileType {
   const [isDown, setIsDown] = useState<boolean>(false);
 
   /**
-   * @desc 메모 영역의 마우스가 Move 되었을 때 수행합니다
+   * @desc 메모 영역의 마우스가 Up 되었을 때 수행합니다
    * @param {React.MouseEvent<HTMLCanvasElement>} event 발생한 이벤트입니다.
    */
   const mouseUpCanvas = (event: React.MouseEvent<HTMLCanvasElement>) => {

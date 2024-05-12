@@ -1,9 +1,38 @@
 // 라이브러리
 import { css } from "styled-components";
 
-const heartStyle = css`
-  background: ${(props) => props.theme.color.deepSmoke};
+const calculateBtnStyle = css`
+  width: 32px;
+  height: 32px;
+  border-radius: 15px;
+  border: 3px solid ${(props) => props.theme.color.lightSmoke};
+  box-shadow: 0 8px 7px -7px ${(props) => props.theme.color.smokeOpacity};
+  padding: 0;
 
+  svg {
+    color: ${(props) => props.theme.color.smoke};
+    font-size: 18px;
+    display: none;
+  }
+
+  &:first-child {
+    svg {
+      color: ${(props) => props.theme.color.deepPrimary};
+      font-size: 18px;
+      display: none;
+    }
+  }
+
+  &.active {
+    box-shadow: 0 8px 7px -7px ${(props) => props.theme.color.deepPrimary};
+
+    svg {
+      display: block;
+    }
+  }
+`;
+
+const heartStyle = css`
   svg {
     font-size: 40px;
   }
@@ -15,8 +44,6 @@ const heartStyle = css`
 `;
 
 const dotStyle = css`
-  background: ${(props) => props.theme.color.deepSmoke};
-
   svg {
     font-size: 10px;
   }
@@ -28,8 +55,6 @@ const dotStyle = css`
 `;
 
 const addNumberStyle = css`
-  background: ${(props) => props.theme.color.deepSmoke};
-
   svg {
     font-size: 28px;
     stroke-width: 10px;
@@ -42,8 +67,6 @@ const addNumberStyle = css`
 `;
 
 const numberStyle = css`
-  background: ${(props) => props.theme.color.smoke};
-
   svg {
     font-size: 28px;
     stroke-width: 10px;
@@ -56,16 +79,12 @@ const numberStyle = css`
 `;
 
 const operateStyle = css`
-  background: ${(props) => props.theme.color.primary};
-
   &:active {
     box-shadow: none;
     background: ${(props) => props.theme.color.deepPrimary};
   }
 
   &:last-child {
-    background: ${(props) => props.theme.color.vividPrimary};
-
     svg {
       color: ${(props) => props.theme.color.smoke};
     }
@@ -74,7 +93,7 @@ const operateStyle = css`
       box-shadow: none;
       background: ${(props) => props.theme.color.vividDeepPrimary};
     }
-  }
+  }s
 `;
 
 const ButtonStyle = css`
@@ -108,6 +127,10 @@ const ButtonStyle = css`
 
   &.heart__btn {
     ${heartStyle}
+  }
+
+  &.calcaulte__canvas__btn {
+    ${calculateBtnStyle}
   }
 `;
 
