@@ -1,6 +1,9 @@
 // 라이브러리
 import styled from "styled-components";
 
+// 컴포넌트
+import CalculateCanvas from "./draw/CalculateCanvas";
+
 // 함수
 import useResizeDom from "../../../hook/common/useResizeDom";
 
@@ -17,7 +20,9 @@ function CalculateLeft(): JSX.Element {
   return (
     <CalculateLeftDiv className="calculate__left">
       {/** 자유롭게 사용할 수 있는 메모 영역입니다. */}
-      <CalculateMemoDiv className="calculate__memo"></CalculateMemoDiv>
+      <CalculateMemoDiv className="calculate__memo">
+        <CalculateCanvas />
+      </CalculateMemoDiv>
 
       {/** 창 사이즈를 변경할 수 있는 영역입니다. */}
       <CalculateResizer
