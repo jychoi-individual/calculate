@@ -11,5 +11,6 @@
     "esModuleInterop": true, // CommonJS와 ES Modules 간의 상호 운용성이 생기게할 지 여부
     "forceConsistentCasingInFileNames": true, // 같은 파일에 대한 일관되지 않은 참조를 허용하지 않을 지 여부입니다.
     "isolatedModules": true // 각 파일을 분리된 모듈로 변경할지 여부입니다.
-  }
+  },
+  "include": ["src", "**/*.tsx"] // 컴파일을 수행할 파일을 기술합니다.
 }
