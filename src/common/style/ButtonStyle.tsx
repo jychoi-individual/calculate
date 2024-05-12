@@ -1,6 +1,33 @@
 // 라이브러리
 import { css } from "styled-components";
 
+const deleteBtnStyle = css`
+  width: 32px;
+  height: 32px;
+  border-radius: 15px;
+  border: 3px solid ${(props) => props.theme.color.lightSmoke};
+  box-shadow: 0 8px 7px -7px ${(props) => props.theme.color.smokeOpacity};
+  padding: 0;
+
+  &:first-child {
+    svg {
+      color: ${(props) => props.theme.color.dark};
+      font-size: 21px;
+    }
+  }
+
+  &:last-child {
+    svg {
+      color: ${(props) => props.theme.background.dark};
+      font-size: 17px;
+    }
+  }
+
+  &.active {
+    box-shadow: 0 8px 7px -7px ${(props) => props.theme.color.deepPrimary};
+  }
+`;
+
 const sizeBtnStyle = css`
   width: 32px;
   height: 32px;
@@ -20,7 +47,6 @@ const sizeBtnStyle = css`
       font-size: 13px;
       color: ${(props) => props.theme.color.deepPrimary};
       font-weight: 600;
-
       box-shadow: 0 8px 7px -7px ${(props) => props.theme.color.deepPrimary};
     }
   }
@@ -157,6 +183,10 @@ const ButtonStyle = css`
 
   &.size__canvas__btn {
     ${sizeBtnStyle}
+  }
+
+  &.delete__canvas__btn {
+    ${deleteBtnStyle}
   }
 `;
 

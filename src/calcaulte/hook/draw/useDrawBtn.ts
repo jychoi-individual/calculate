@@ -7,6 +7,25 @@ import { FileType } from "../../../common/type/commonType";
  */
 function useDrawBtn(): FileType {
   /**
+   * @desc 캔버스의 모든 것을 초기화하기 위합니다.
+   * @param {React.RefObject<HTMLCanvasElement>} canvas 메모 캔버스입니다.
+   */
+  const deleteContextAll = (canvas: React.RefObject<HTMLCanvasElement>) => {
+    if (canvas.current !== null) {
+      const context = canvas.current.getContext(
+        "2d"
+      ) as CanvasRenderingContext2D;
+      context.clearRect(
+        0,
+        0,
+        canvas.current.clientWidth,
+        canvas.current.clientHeight
+      );
+      context.beginPath();
+    }
+  };
+
+  /**
    * @desc 캔버스의 그리기 색상을 변경합니다.
    * @param {React.RefObject<HTMLCanvasElement>} canvas 메모 캔버스입니다.
    * @param {string} background 변경할 색상입니다.
@@ -85,7 +104,7 @@ function useDrawBtn(): FileType {
     changeContextSize(canvas, size);
   };
 
-  return { changeColorBtn, changeSizeBtn };
+  return { changeColorBtn, changeSizeBtn, deleteContextAll };
 }
 
 export default useDrawBtn;

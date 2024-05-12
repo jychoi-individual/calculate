@@ -26,7 +26,7 @@ function CalculateSizeBtn({ memoCanvas }: CanvasInterface): JSX.Element {
   const { changeSizeBtn } = useDrawBtn();
 
   return (
-    <SizeBtnDiv className="color__btn__div">
+    <SizeBtnDiv className="size__btn__div">
       {sizeButton.map(
         (
           el: { size: string; background: string; text: string },

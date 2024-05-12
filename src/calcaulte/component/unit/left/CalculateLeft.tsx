@@ -6,6 +6,7 @@ import { useRef } from "react";
 import CalculateCanvas from "./memo/CalculateCanvas";
 import CalcaulteColorBtn from "./common/CalcaulteColorBtn";
 import CalculateSizeBtn from "./common/CalcaulteSizeBtn";
+import CalculateDeleteBtn from "./common/CalcaulteDeleteBtn";
 
 // 함수
 import useResizeDom from "../../../hook/common/useResizeDom";
@@ -28,6 +29,7 @@ function CalculateLeft(): JSX.Element {
       <CalculateCanvasBtnDiv className="calculate__canvas__btn">
         <CalcaulteColorBtn memoCanvas={memoCanvas} />
         <CalculateSizeBtn memoCanvas={memoCanvas} />
+        <CalculateDeleteBtn memoCanvas={memoCanvas} />
       </CalculateCanvasBtnDiv>
 
       {/** 자유롭게 사용할 수 있는 메모 영역입니다. */}
